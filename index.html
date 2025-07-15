@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Medical checkup form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glass-card">
+<h1>GAYATHRI JUNIOR SCHOOL</h1>
+<h2>WELLNESS SCREENING DAY - HEALTH REPORT</h2>
+</div>
+<form action="https://formspree.io/f/xnnvldrv" method="POST">
+<fieldset class="details">
+    <legend><strong>Personal details</strong></legend>
+    <label>Name of the Student:
+        <input type="text" required name="first-name">
+    </label>
+    <label>Class:<input type="text" name="class-number" required></label>
+    <label>Roll no:<input type="number" name="roll-number"></label>
+    <label>Date:<input type="date" name="date"></label>
+    <label>Parent's name:<input type="text" name="parent-name" required></label>
+    <label>Contact number:<input type="number" name="contact-number" required></label>
+</fieldset>
+<fieldset class="parameters">
+     <legend><strong>Health Parameters</strong></legend>
+    <div class="form-row"><label>Height(in cm):<input type="number" required name="height"></label></div>
+    <div class="form-row"><label>Weight(in kg):<input type="number" required name="weight"></label></div>
+    <div class="form-row"><label>Body Temperature(&deg;C):<input type="number" required name=body-temperature></label></div>
+    <div class="form-row"><label>
+  Blood Pressure (mmHg):
+  Systolic <input type="number" name="systolic" required>
+  Diastolic <input type="number" name="diastolic" required>
+</label></div>
+</fieldset>
+<fieldset class="remarks">
+    <legend><strong>Remarks</strong></legend>
+    <label>Body Temperature
+        <select name="Temperature-remark" placeholder="Select one">
+            <option value=""disabled selected>Select one</option>
+            <option>below 35&deg;C-Attention required(Hypothermia)</option>
+            <option>36.1&deg;C-37.2&deg;C-Normal</option>
+            <option>37.3&deg;C-38.0&deg;C-Low Grade Fever</option>
+            <option>38.1&deg;C-39.0&deg;C-Moderate Fever</option>
+            <option>39.1&deg;C-40&deg;C-High Fever</option>
+            <option>Above 40&deg;C-Very High Fever</option>
+        </select> </label>
+        <label>Blood Pressure
+            <select name="Systolic-remark">
+                <option value=""disabled selected>Systolic reading (mmHg)</option>
+                <option>below normal</option>
+                <option>normal</option>
+                <option>above normal</option>
+            </select>
+            <select name="Diastolic-remark">
+                <option value=""disabled selected>Diastolic reading (mmHg)</option>
+                <option>below normal</option>
+                <option>normal</option>
+                <option>above normal</option>
+            </select>
+            <p>Click here to view the <a href="https://images.onlymyhealth.com/imported/images/2022/May/02_May_2022/Inside1_lowbpinchildren.jpg" target="blank"> normal blood pressure reading</a></p>
+        </label>
+        <label>
+            Body Mass Index(Percentile range):<input name="bmi-percentile" type="text" required>
+            <p>Use <a href=https://www.cdc.gov/bmi/child-teen-calculator/widget.html?CDC_AAref_Val=https://www.cdc.gov/healthyweight/bmi/calculator.html target="blank">Body mass Index Calculator</a></p>
+        </label>
+
+</fieldset>
+<fieldset class="general">
+    <legend><strong>General Remarks</strong></legend>
+    <label>
+        <textarea name="general-remarks" rows="5" cols="100"></textarea>
+    </label>
+</fieldset>
+<fieldset class="evaluator">
+    <label>Verified by <select name="evaluator-name">
+        <option value=""disabled selected>Evaluator name</option>
+        <option>Priya Viswanath</option>
+        <option>Pooja Viswanath</option>
+    </select></label>
+</fieldset>
+<br>
+<button type="submit">Submit Form</button>
+</form>
+<br><br><br>
+</body>
+<footer>Prepared by Thomas Raju<br>
+for queries reach me at: <a href="thomasraju2030@gmail.com">thomasraju2030@gmail.com</a></footer>
+</html>

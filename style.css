@@ -1,0 +1,38 @@
+h1,h2{text-align:center;
+color: black;
+font-weight:bold;}
+.parameters{display:flex;
+padding-top: 0.5cm;}
+.details{padding-top:0.5cm}
+.remarks{padding-top:0.5cm}
+.general{padding-top:0.5cm}
+body {
+  background-image: url('Gayathri school3.jpg');
+  background-size:cover;
+  object-fit:cover;
+  font-weight:500;
+}
+a{color:darkblue;}
+a:hover{color: white;}
+input{border-color: black;
+border-style:outset;}
+form{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:black;
+  font-style:inherit;
+  border:1px solid black;
+}
+.glass-card {
+  width: 1425px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px); /* main blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+}
+fieldset{border-color: black;}
+input:hover{transform:scale(1.05);
+transition:0.5s;}
