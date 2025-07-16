@@ -36,3 +36,15 @@ form{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-seri
 fieldset{border-color: black;}
 input:hover{transform:scale(1.05);
 transition:0.5s;}
+
+.heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Optional: only if you want vertical centering */
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 2.5rem; /* Adjust as needed */
+  text-align: center;
+}
