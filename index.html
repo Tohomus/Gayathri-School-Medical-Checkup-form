@@ -1,92 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical checkup form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Checkup Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="glass-card">
-    <div class="heading-wrapper">
-<h1 class="main-title">GAYATHRI JUNIOR SCHOOL</h1>
-</div>
-<h2>WELLNESS SCREENING DAY - HEALTH REPORT</h2>
-</div>
-<form action="https://formspree.io/f/xnnvldrv" method="POST">
-<fieldset class="details">
-    <legend><strong>Personal details</strong></legend>
-    <label>Name of the Student:
-        <input type="text" required name="first-name">
-    </label>
-    <label>Class:<input type="text" name="class-number" required></label>
-    <label>Roll no:<input type="number" name="roll-number"></label>
-    <label>Date:<input type="date" name="date"></label>
-    <label>Parent's name:<input type="text" name="parent-name" required></label>
-    <label>Contact number:<input type="number" name="contact-number" required></label>
-</fieldset>
-<fieldset class="parameters">
-     <legend><strong>Health Parameters</strong></legend>
-    <div class="form-row"><label>Height(in cm):<input type="number" required name="height"></label></div>
-    <div class="form-row"><label>Weight(in kg):<input type="number" required name="weight"></label></div>
-    <div class="form-row"><label>Body Temperature(&deg;C):<input type="number" required name=body-temperature></label></div>
-    <div class="form-row"><label>
-  Blood Pressure (mmHg):
-  Systolic <input type="number" name="systolic" required>
-  Diastolic <input type="number" name="diastolic" required>
-</label></div>
-</fieldset>
-<fieldset class="remarks">
-    <legend><strong>Remarks</strong></legend>
-    <label>Body Temperature
-        <select name="Temperature-remark" placeholder="Select one">
-            <option value=""disabled selected>Select one</option>
-            <option>below 35&deg;C-Attention required(Hypothermia)</option>
-            <option>36.1&deg;C-37.2&deg;C-Normal</option>
-            <option>37.3&deg;C-38.0&deg;C-Low Grade Fever</option>
-            <option>38.1&deg;C-39.0&deg;C-Moderate Fever</option>
-            <option>39.1&deg;C-40&deg;C-High Fever</option>
-            <option>Above 40&deg;C-Very High Fever</option>
-        </select> </label>
-        <label>Blood Pressure
-            <select name="Systolic-remark">
-                <option value=""disabled selected>Systolic reading (mmHg)</option>
-                <option>below normal</option>
-                <option>normal</option>
-                <option>above normal</option>
-            </select>
-            <select name="Diastolic-remark">
-                <option value=""disabled selected>Diastolic reading (mmHg)</option>
-                <option>below normal</option>
-                <option>normal</option>
-                <option>above normal</option>
-            </select>
-            <p>Click here to view the <a href="https://images.onlymyhealth.com/imported/images/2022/May/02_May_2022/Inside1_lowbpinchildren.jpg" target="blank"> normal blood pressure reading</a></p>
-        </label>
+
+<div class="container">
+
+  <div class="glass-card">
+    <h1 class="main-title">GAYATHRI JUNIOR SCHOOL</h1>
+    <h2>WELLNESS SCREENING DAY - HEALTH REPORT</h2>
+  </div>
+
+  <form action="https://formspree.io/f/xnnvldrv" method="POST">
+
+    <!-- Personal Details -->
+    <fieldset>
+      <legend><strong>Personal Details</strong></legend>
+
+      <div class="grid-2">
         <label>
-            Body Mass Index(Percentile range):<input name="bmi-percentile" type="text" required>
-            <p>Use <a href=https://www.cdc.gov/bmi/child-teen-calculator/widget.html?CDC_AAref_Val=https://www.cdc.gov/healthyweight/bmi/calculator.html target="blank">Body mass Index Calculator</a></p>
+          Name of the Student
+          <input type="text" required name="first-name">
         </label>
 
-</fieldset>
-<fieldset class="general">
-    <legend><strong>General Remarks</strong></legend>
-    <label>
-        <textarea name="general-remarks" rows="5" cols="100"></textarea>
-    </label>
-</fieldset>
-<fieldset class="evaluator">
-    <label>Verified by <select name="evaluator-name">
-        <option value=""disabled selected>Evaluator name</option>
-        <option>Priya Viswanath</option>
-        <option>Pooja Viswanath</option>
-    </select></label>
-</fieldset>
-<br>
-<button type="submit">Submit Form</button>
-</form>
-<br><br><br>
+        <label>
+          Class
+          <input type="text" name="class-number" required>
+        </label>
+
+        <label>
+          Roll No
+          <input type="number" name="roll-number">
+        </label>
+
+        <label>
+          Date
+          <input type="date" name="date">
+        </label>
+
+        <label>
+          Parent's Name
+          <input type="text" name="parent-name" required>
+        </label>
+
+        <label>
+          Contact Number
+          <input type="tel" name="contact-number" required>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Health Parameters -->
+    <fieldset>
+      <legend><strong>Health Parameters</strong></legend>
+
+      <div class="grid-2">
+
+        <label>
+          Height (cm)
+          <input type="number" required name="height">
+        </label>
+
+        <label>
+          Weight (kg)
+          <input type="number" required name="weight">
+        </label>
+
+        <label>
+          Body Temperature (°C)
+          <input type="number" required name="body-temperature">
+        </label>
+
+        <label>
+          Blood Pressure
+          <div class="bp-group">
+            <input type="number" name="systolic" placeholder="Systolic" required>
+            <input type="number" name="diastolic" placeholder="Diastolic" required>
+          </div>
+        </label>
+
+      </div>
+    </fieldset>
+
+    <!-- Remarks -->
+    <fieldset>
+      <legend><strong>Remarks</strong></legend>
+
+      <label>
+        Body Temperature
+        <select name="Temperature-remark">
+          <option value="" disabled selected>Select one</option>
+          <option>Below 35°C - Hypothermia</option>
+          <option>36.1°C - 37.2°C - Normal</option>
+          <option>37.3°C - 38°C - Low Grade Fever</option>
+          <option>38.1°C - 39°C - Moderate Fever</option>
+          <option>39.1°C - 40°C - High Fever</option>
+          <option>Above 40°C - Very High Fever</option>
+        </select>
+      </label>
+
+      <label>
+        Blood Pressure
+        <div class="bp-group">
+          <select name="Systolic-remark">
+            <option value="" disabled selected>Systolic</option>
+            <option>Below Normal</option>
+            <option>Normal</option>
+            <option>Above Normal</option>
+          </select>
+
+          <select name="Diastolic-remark">
+            <option value="" disabled selected>Diastolic</option>
+            <option>Below Normal</option>
+            <option>Normal</option>
+            <option>Above Normal</option>
+          </select>
+        </div>
+
+        <p>
+          View
+          <a href="https://images.onlymyhealth.com/imported/images/2022/May/02_May_2022/Inside1_lowbpinchildren.jpg" target="_blank">
+            normal blood pressure readings
+          </a>
+        </p>
+      </label>
+
+      <label>
+        Body Mass Index (Percentile Range)
+        <input name="bmi-percentile" type="text" required>
+
+        <p>
+          Use the
+          <a href="https://www.cdc.gov/bmi/child-teen-calculator/widget.html?CDC_AAref_Val=https://www.cdc.gov/healthyweight/bmi/calculator.html" target="_blank">
+            BMI Calculator
+          </a>
+        </p>
+      </label>
+
+    </fieldset>
+
+    <!-- General Remarks -->
+    <fieldset>
+      <legend><strong>General Remarks</strong></legend>
+
+      <textarea name="general-remarks" rows="5"></textarea>
+    </fieldset>
+
+    <!-- Evaluator -->
+    <fieldset>
+      <legend><strong>Evaluator</strong></legend>
+
+      <label>
+        Verified By
+        <select name="evaluator-name">
+          <option value="" disabled selected>Evaluator Name</option>
+          <option>Priya Viswanath</option>
+          <option>Pooja Viswanath</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <button type="submit">Submit Form</button>
+
+  </form>
+
+  <footer>
+    Prepared by Thomas Raju <br>
+    For queries:
+    <a href="mailto:thomasraju2030@gmail.com">
+      thomasraju2030@gmail.com
+    </a>
+  </footer>
+
+</div>
+
 </body>
-<footer>Prepared by Thomas Raju<br>
-for queries reach me at: <a href="thomasraju2030@gmail.com">thomasraju2030@gmail.com</a></footer>
 </html>
